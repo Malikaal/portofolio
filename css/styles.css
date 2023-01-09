@@ -11297,6 +11297,11 @@ html {
   padding-bottom: 7.5rem;
 }
 
+.content-section-sm {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 .content-section-heading h2, .content-section-heading .h2 {
   font-size: 3rem;
 }
