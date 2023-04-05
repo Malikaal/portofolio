@@ -220,6 +220,16 @@
                 </div>
                 <div class="row gx-0">
                     <div class="col-lg-6">
+                        <a class="portfolio-item" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="modal('Sidindang-iOS')">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div><p><h1>Sidindang Mobile(iOS)</h1><h3 style="white-space: pre-line;">01/2022 - Present</h3></p></div>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/porto-img/Sidindang-iOSBig.png" alt="..." />
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
                         <a class="portfolio-item" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="modal('Eatsie')">
                             <div class="caption">
                                 <div class="caption-content">
@@ -347,6 +357,9 @@
           <p id="Tools2" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
           <p id="Tools3" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
           <p id="Tools4" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
+          <p id="Tools5" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
+          <p id="Tools6" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
+          <p id="Tools7" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
         </div>
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
@@ -391,47 +404,79 @@
         <script src="js/scripts.js"></script>
 
         <script>
-            const Content = [
-                "An iOS app that helps parents with 1-2-year-old children who want to try various recipes by recommending personalized recipes using CreateML to learn the child's preferences based on main ingredients, color, cooking process, and eating time.",
-                "An iOS app that accommodates and assists travelers with an easy-to-use recommendation list based on their purpose during travel.",
-                "An app that can store logistics positions in the bag, to make it easier for Campers to check and find the items they are looking for."
-            ]
+            const Content = {
+                "Sidindang-iOS" : "An iOS app that is used to assist the Padang City Trade Office in managing market data, store locations, sellers, and prices of basic commodities which will be updated daily.",
+                "Eatsie" : "An iOS app that helps parents with 1-2-year-old children who want to try various recipes by recommending personalized recipes using CreateML to learn the child's preferences based on main ingredients, color, cooking process, and eating time.",
+                "Joury" : "An iOS app that accommodates and assists travelers with an easy-to-use recommendation list based on their purpose during travel.",
+                "FindBack" : "An app that can store logistics positions in the bag, to make it easier for Campers to check and find the items they are looking for."
+            }
             
             const Tools = [
-                "- Swift",
-                "- SwiftUI",
-                "- CoreData",
-                "- CloudKit",
-                "- HealthKit",
-                "- WatchKit",
-                "- CreateML",
-                "- AVFoundation"
+                "- Swift", // 0
+                "- SwiftUI", // 1
+                "- CoreData", // 2
+                "- CloudKit", // 3
+                "- HealthKit", // 4
+                "- WatchKit", // 5
+                "- CreateML", // 6
+                "- AVFoundation", // 7
+                "- CoreLocation", // 8
+                "- CocoaPods: Alamofire", // 9
+                "- MVVM Desaign Pattern", // 10
+                "- Protocol Oriented Programming", // 11
+                "- HTTP Request", //12
+                ""
             ]
 
             function modal(title) {
                 $('#ModalLabel').text(title);
 
                 if (title == 'Eatsie'){
-                    $('#ModalText').text(Content[0]);
+                    $('#ModalText').text(Content['$title']);
                     $('#Tools1').text(Tools[0]);
                     $('#Tools2').text(Tools[1]);
                     $('#Tools3').text(Tools[2]);
                     $('#Tools4').text(Tools[6]);
+                    $('#Tools5').text(Tools[13]);
+                    $('#Tools6').text(Tools[13]);
+                    $('#Tools7').text(Tools[13]);
                 }else if (title == 'Joury') {
-                    $('#ModalText').text(Content[1]);
+                    $('#ModalText').text(Content['$title']);
                     $('#Tools1').text(Tools[0]);
                     $('#Tools2').text(Tools[1]);
                     $('#Tools3').text(Tools[2]);
+                    $('#Tools4').text(Tools[13]);
+                    $('#Tools5').text(Tools[13]);
+                    $('#Tools6').text(Tools[13]);
+                    $('#Tools7').text(Tools[13]);
                 }else if (title == 'FindBack') {
-                    $('#ModalText').text(Content[2]);
+                    $('#ModalText').text(Content['$title']);
                     $('#Tools1').text(Tools[0]);
                     $('#Tools2').text(Tools[1]);
                     $('#Tools3').text(Tools[2]);
                     $('#Tools4').text(Tools[7]);
+                    $('#Tools5').text(Tools[13]);
+                    $('#Tools6').text(Tools[13]);
+                    $('#Tools7').text(Tools[13]);
                 }else if (title == 'Betwixt') {
-                    $('#ModalText').text(Content[3]);
+                    $('#ModalText').text(Content['$title']);
+                    $('#Tools1').text(Tools[13]);
+                    $('#Tools2').text(Tools[13]);
+                    $('#Tools3').text(Tools[13]);
+                    $('#Tools4').text(Tools[13]);
+                    $('#Tools5').text(Tools[13]);
+                    $('#Tools6').text(Tools[13]);
+                    $('#Tools7').text(Tools[13]);
+                }else if (title == 'Sidindang-iOS') {
+                    $('#ModalText').text(Content['$title']);
+                    $('#Tools1').text(Tools[0]);
+                    $('#Tools2').text(Tools[1]);
+                    $('#Tools3').text(Tools[2]);
+                    $('#Tools4').text(Tools[7]);
+                    $('#Tools5').text(Tools[8]);
+                    $('#Tools6').text(Tools[9]);
+                    $('#Tools7').text(Tools[10]);
                 }
-                
 
                 document.getElementById("imgContent1").src = "assets/porto-img/"+title+".png";
                 document.getElementById("imgContent2").src = "assets/porto-img/"+title+"2.png";
