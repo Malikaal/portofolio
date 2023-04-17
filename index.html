@@ -152,7 +152,7 @@
 <!--                             An <b>ambitious and hard-working</b> person who graduated from Information Systems at Andalas University. Malik A. Aziz Lubis is a person who has interested in <b>software development</b>. -->
                             <br>
                             In the last year, I have learned about Development apps in Apple Ecosystem at <b>Apple Developer Academy</b>.
-                            As a learner at Apple Developer Academy, I gets a lot of new experience, especially in the Apple ecosystem development like <b>iOS and WatchOS</b> using SwiftUI, CoreData, CloudKit, HealthKit, WatchKit, and other apple frameworks.
+                            As a learner at Apple Developer Academy, I gets a lot of new experience, especially in the Apple ecosystem development like <b>iOS and WatchOS</b> using SwiftUI, CoreData, WatchKit, CocoaPods, Alamofire, and other frameworks.
                             <br>
                             I also have experience in developing <b>web and mobile applications</b> using PHP, Javascript, SQL, kotlin, and B4A.
 <!--                             He has a lot of experience in <b>web programming</b> using PHP, Javascript, and SQL. He has also created <b>android</b> apps using kotlin and B4A.  -->
@@ -319,23 +319,24 @@
           <!-- Slideshow container -->
         <div class="slideshow-container">
             <center>
+
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fadee">
-            <div class="numbertext">1 / 3</div>
-            <img src="" style="width:100%" id="imgContent1">
-            <!-- <div class="text">Caption Text</div> -->
+                <div class="numbertext">1 / 3</div>
+                <img src="" style="width:100%" id="imgContent1">
+                <!-- <div class="text">Caption Text</div> -->
+            </div>
+
+            <div class="mySlides fadee">
+                <div class="numbertext">2 / 3</div>
+                <img src="" style="width:100%" id="imgContent2">
+                <!-- <div class="text">Caption Two</div> -->
             </div>
         
             <div class="mySlides fadee">
-            <div class="numbertext">2 / 3</div>
-            <img src="" style="width:100%" id="imgContent2">
-            <!-- <div class="text">Caption Two</div> -->
-            </div>
-        
-            <div class="mySlides fadee">
-            <div class="numbertext">3 / 3</div>
-            <img src="" style="width:100%" id="imgContent3">
-            <!-- <div class="text">Caption Three</div> -->
+                <div class="numbertext">3 / 3</div>
+                <img src="" style="width:100%" id="imgContent3">
+                <!-- <div class="text">Caption Three</div> -->
             </div>
         
             <!-- Next and previous buttons -->
@@ -353,7 +354,8 @@
         </div>
 
           <p id="ModalText" style="font-size: 20px; white-space: pre-line;"></p>
-          <p id="" style="white-space: pre-line; font-size: 17px;">Created Using:</p> 
+          <p id="textVideoLink" style="white-space: pre-line; font-size: 19px;">See demo video <a href="" target="_blank" id="videoLink"><b>here!</b></a></p> 
+          <p id="" style="white-space: pre-line; font-size: 19px;">Created Using:</p> 
           <p id="Tools1" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
           <p id="Tools2" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
           <p id="Tools3" style="white-space: pre-line; font-size: 20px; font-weight: bold;"></p>
@@ -405,6 +407,8 @@
         <script src="js/scripts.js"></script>
 
         <script>
+            
+
             const Content = {
                 "Sidindang-iOS" : "An iOS app that is used to assist the Padang City Trade Office in managing market data, store locations, sellers, and prices of basic commodities which will be updated daily.",
                 "Eatsie" : "An iOS app that helps parents with 1-2-year-old children who want to try various recipes by recommending personalized recipes using CreateML to learn the child's preferences based on main ingredients, color, cooking process, and eating time.",
@@ -429,9 +433,15 @@
                 ""
             ]
 
-            function modal(title) {
-                $('#ModalLabel').text(title);
+            const videoLink = [
+                "https://drive.google.com/file/d/1gwVenXsJkErGYkCGJyidxk_cPasyVYI_/view" // sidindang
+            ]
 
+            function modal(title) {
+                $('#textVideoLink').hide()
+                $('#ModalLabel').text(title);
+                // document.getElementById('video').show();
+                // document.getElementById('videoDot').show();
                 if (title == 'Eatsie'){
                     $('#ModalText').text(Content['$title']);
                     $('#Tools1').text(Tools[0]);
@@ -470,6 +480,8 @@
                     $('#Tools7').text(Tools[13]);
                 }else if (title == 'Sidindang-iOS') {
                     $('#ModalText').text(Content['$title']);
+                    $('#textVideoLink').show();
+                    $('#videoLink').attr("href", videoLink[0]);
                     $('#Tools1').text(Tools[0]);
                     $('#Tools2').text(Tools[1]);
                     $('#Tools3').text(Tools[2]);
